@@ -27,6 +27,3 @@ marshaller.marshal(zthes, new File("/some/file.xml")); // send to a file
 marshaller.marshal(zthes2, System.out); // send to an input stream
 ```
 
-# Todo
-
-- flesh out `Taxon` support with *description* and *userfor*
