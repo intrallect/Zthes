@@ -1,0 +1,50 @@
+package com.intrallect.zthes.model;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "relation")
+public class Relation {
+
+	private String relationType = "BT";
+	private String termId;
+	private String termName;
+
+	public Relation() { }
+
+	public Relation(final Term term) {
+		this(term.getTermId(), term.getTermName());
+	}
+
+	public Relation(final String termId, final String termName) {
+		this.termId = termId;
+		this.termName = termName;
+	}
+
+	@XmlElement
+	public String getRelationType() {
+		return relationType;
+	}
+
+	public void setRelationType(final String relationType) {
+		this.relationType = relationType;
+	}
+
+	@XmlElement
+	public String getTermId() {
+		return termId;
+	}
+
+	public void setTermId(final String termId) {
+		this.termId = termId;
+	}
+
+	@XmlElement
+	public String getTermName() {
+		return termName;
+	}
+
+	public void setTermName(final String termName) {
+		this.termName = termName;
+	}
+}
