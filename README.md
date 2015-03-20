@@ -8,7 +8,7 @@ Zthes (http://zthes.z3950.org/) for Java using JAXB
 final Taxon taxon = new Taxon("refid.1", "parent");
 taxon.setDescription("Some description");
 final Taxon taxon2 = new Taxon("refid.1.1", "child");
-taxon2.addUserfor("Usefor test");
+taxon2.addUsefor("Usefor test");
 taxon2.setParent(taxon);
 
 // or B) build Zthes Terms directly:

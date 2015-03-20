@@ -13,7 +13,7 @@ public class Taxon {
 	private String name;
 	private String refId;
 	private String description;
-	private List<String> userfors = new ArrayList<>();
+	private List<String> usefors = new ArrayList<>();
 
 	public Taxon(final String refId, final String name) {
 		this(refId, name, null);
@@ -57,16 +57,16 @@ public class Taxon {
 		this.description = description;
 	}
 
-	public List<String> getUserfors() {
-		return userfors;
+	public List<String> getUsefors() {
+		return usefors;
 	}
 
-	public void setUserfors(final List<String> userfors) {
-		this.userfors = userfors;
+	public void setUsefors(final List<String> userfors) {
+		this.usefors = userfors;
 	}
 
-	public void addUserfor(final String userfor) {
-		getUserfors().add(userfor);
+	public void addUsefor(final String userfor) {
+		getUsefors().add(userfor);
 	}
 
 	@Override
@@ -92,7 +92,7 @@ public class Taxon {
 
 		term.setTermNote(getDescription());
 
-		for (final String userfor : getUserfors()) {
+		for (final String userfor : getUsefors()) {
 			final Relation relation = new Relation();
 			relation.setTermName(userfor);
 			relation.setRelationType(RelationType.UF);
