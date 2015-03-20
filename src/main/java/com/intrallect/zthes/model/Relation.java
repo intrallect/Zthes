@@ -21,6 +21,11 @@ public class Relation {
 		this.termName = termName;
 	}
 
+	public Relation(final RelationType relationType, final String termName) {
+		this.relationType = relationType;
+		this.termName = termName;
+	}
+
 	@XmlElement
 	public RelationType getRelationType() {
 		return relationType;

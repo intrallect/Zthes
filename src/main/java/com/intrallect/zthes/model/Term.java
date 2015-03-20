@@ -5,8 +5,10 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 @XmlRootElement(name = "term")
+@XmlType(propOrder = {"termId", "termName", "termNote", "termType", "relations"})
 public class Term {
 
 	private String termId;
@@ -65,5 +67,9 @@ public class Term {
 
 	public void setRelations(final List<Relation> relations) {
 		this.relations = relations;
+	}
+
+	public void addRelation(final Relation relation) {
+		getRelations().add(relation);
 	}
 }
