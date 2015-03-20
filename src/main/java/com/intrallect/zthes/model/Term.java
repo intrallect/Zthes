@@ -11,7 +11,7 @@ public class Term {
 
 	private String termId;
 	private String termName;
-	private String termType = "PT";
+	private TermType termType = TermType.PT;
 	private String termNote;
 	private List<Relation> relations = new ArrayList<>();
 
@@ -41,11 +41,11 @@ public class Term {
 	}
 
 	@XmlElement
-	public String getTermType() {
+	public TermType getTermType() {
 		return termType;
 	}
 
-	public void setTermType(final String termType) {
+	public void setTermType(final TermType termType) {
 		this.termType = termType;
 	}
 

@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "relation")
 public class Relation {
 
-	private String relationType = "BT";
+	private RelationType relationType = RelationType.BT;
 	private String termId;
 	private String termName;
 
@@ -22,11 +22,11 @@ public class Relation {
 	}
 
 	@XmlElement
-	public String getRelationType() {
+	public RelationType getRelationType() {
 		return relationType;
 	}
 
-	public void setRelationType(final String relationType) {
+	public void setRelationType(final RelationType relationType) {
 		this.relationType = relationType;
 	}
 
