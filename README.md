@@ -4,7 +4,6 @@ Zthes (http://zthes.z3950.org/) for Java using JAXB
 # Usage
 
 ```java
-
 // A) build your Taxonomy:
 final Taxon taxon = new Taxon("refid.1", "parent");
 final Taxon taxon2 = new Taxon("refid.1.1", "child");
@@ -25,9 +24,7 @@ final Zthes zthes2 = tool.termsToZthes(term, term2);
 // Get a jaxb marshaller, and use it as per usual.. :
 final Marshaller marshaller = tool.getMarshaller();
 marshaller.marshal(zthes, new File("/some/file.xml")); // send to a file
-marshaller.marshal(zthes, System.out); // send to an input stream
-  
-
+marshaller.marshal(zthes2, System.out); // send to an input stream
 ```
 
 # Todo
