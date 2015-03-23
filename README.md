@@ -26,6 +26,6 @@ final Zthes zthes2 = tool.termsToZthes(term, term2);
 // Get a jaxb marshaller, and use it as per usual.. :
 final Marshaller marshaller = tool.getMarshaller();
 marshaller.marshal(zthes, new File("/some/file.xml")); // send to a file
-marshaller.marshal(zthes2, System.out); // send to an input stream
+marshaller.marshal(zthes2, System.out); // send to an output stream
 ```
 
